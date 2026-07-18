@@ -3,55 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FutureWise AI</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
+
+<div class="background-glow"></div>
 
 <div class="container">
 
+    <!-- Header -->
     <div class="chat-header">
-        <h1>🤖 FutureWise AI</h1>
-        <p>Your Intelligent Future Companion</p>
-    </div>
 
-    <div id="chat-box" class="chat-box">
+        <div class="logo">
+            🤖
+        </div>
 
-        <div class="bot-message">
-            👋 Hello! I'm FutureWise AI.<br><br>
-            Ask me anything about:
-            <br><br>
-            🚀 Future Careers
-            <br>
-            🤖 Artificial Intelligence
-            <br>
-            💻 Technology
-            <br>
-            📚 Learning Roadmaps
-            <br>
-            🌍 Future Trends
+        <div>
+            <h1>FutureWise AI</h1>
+            <p>Your Intelligent Future Companion</p>
         </div>
 
     </div>
 
+
+    <!-- Welcome Cards -->
+    <div class="feature-section">
+
+        <div class="feature-card">
+            🚀
+            <span>Career Paths</span>
+        </div>
+
+        <div class="feature-card">
+            🧠
+            <span>AI Skills</span>
+        </div>
+
+        <div class="feature-card">
+            📚
+            <span>Learning Roadmaps</span>
+        </div>
+
+    </div>
+
+
+    <!-- Chat Area -->
+    <div id="chat-box" class="chat-box">
+
+
+        <div class="bot-message">
+
+            👋 Hello! I'm <b>FutureWise AI</b>.
+
+            <br><br>
+
+            I can help you explore:
+
+            <br><br>
+
+            🚀 Future Careers
+            <br>
+            🤖 Artificial Intelligence
+            <br>
+            💻 Technology Trends
+            <br>
+            📚 Learning Roadmaps
+            <br>
+            🌍 Future Opportunities
+
+            <br><br>
+
+            Ask me anything! ✨
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Input -->
     <div class="chat-input">
 
         <input
             type="text"
             id="user-input"
-            placeholder="Ask something..."
+            placeholder="Ask FutureWise anything..."
         >
 
+
         <button id="send-btn">
-            Send
+            Send 🚀
         </button>
+
 
     </div>
 
+
 </div>
 
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 
 </body>
 </html>
