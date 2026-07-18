@@ -12,7 +12,7 @@ function formatMessage(message){
 
 
 // Add message to chat
-function addMessage(message, sender) {
+function addMessage(message, sender){
 
     const messageDiv = document.createElement("div");
 
@@ -20,25 +20,37 @@ function addMessage(message, sender) {
         ? "user-message"
         : "bot-message";
 
-    messageDiv.innerHTML = formatMessage(message);
 
-    // Animation
-    messageDiv.style.opacity = "0";
-    messageDiv.style.transform = "translateY(10px)";
+    if(sender === "bot"){
+
+        messageDiv.innerHTML = `
+            <div class="bot-header">
+                <div class="ai-avatar">🤖</div>
+                <span>FutureWise AI</span>
+            </div>
+
+            <div class="bot-text">
+                ${formatMessage(message)}
+            </div>
+        `;
+
+    }
+    else{
+
+        messageDiv.innerHTML = `
+            <div class="user-text">
+                ${message}
+            </div>
+        `;
+
+    }
+
 
     chatBox.appendChild(messageDiv);
 
-
-    setTimeout(() => {
-        messageDiv.style.transition = "0.3s ease";
-        messageDiv.style.opacity = "1";
-        messageDiv.style.transform = "translateY(0)";
-    }, 50);
-
-
     chatBox.scrollTop = chatBox.scrollHeight;
-}
 
+}
 
 
 // Typing animation
@@ -177,3 +189,38 @@ userInput.addEventListener(
 
     }
 );
+// Quick suggestion buttons
+
+const suggestions = document.querySelectorAll(".suggestion-btn");
+
+
+suggestions.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        let prompt = button.innerText;
+
+
+        if(prompt.includes("Career")){
+            userInput.value =
+            "Suggest career paths for a computer science student";
+        }
+
+
+        else if(prompt.includes("AI Skills")){
+            userInput.value =
+            "What AI skills should I learn in 2026?";
+        }
+
+
+        else if(prompt.includes("Learning")){
+            userInput.value =
+            "Create a learning roadmap for becoming an AI engineer";
+        }
+
+
+        sendBtn.click();
+
+    });
+
+});

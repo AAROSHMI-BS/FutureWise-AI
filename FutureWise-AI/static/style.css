@@ -578,3 +578,91 @@ body {
     margin-top:15px;
 
 }
+/* AI Avatar */
+
+.bot-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+
+.ai-avatar{
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(99,102,241,0.2);
+
+    box-shadow:
+    0 0 15px rgba(99,102,241,0.8);
+
+    animation: glow 2s infinite;
+
+}
+
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 5px #6366f1;
+    }
+
+    50%{
+        box-shadow:0 0 20px #818cf8;
+    }
+
+    100%{
+        box-shadow:0 0 5px #6366f1;
+    }
+
+}
+
+
+/* Bot message */
+
+.bot-message{
+
+    padding:15px;
+    border-radius:15px;
+
+    margin:15px 0;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+/* User message */
+
+.user-message{
+    display:flex;
+    justify-content:flex-end;
+    margin:15px 0;
+}
+.bot-message{
+    max-width:75%;
+    padding:15px;
+    border-radius:18px;
+    margin:15px 0;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+}
+.suggestion-btn {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.suggestion-btn:hover {
+    transform: translateY(-5px);
+}
