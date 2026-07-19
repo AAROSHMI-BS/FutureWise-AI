@@ -24,7 +24,6 @@ body {
 }
 
 
-/* Floating background glow */
 
 .background-glow{
 
@@ -57,7 +56,7 @@ body {
 
 
 
-/* Main container */
+
 
 
 .container{
@@ -95,7 +94,7 @@ body {
 
 
 
-/* Header */
+
 
 
 .chat-header{
@@ -120,7 +119,6 @@ body {
     1px solid rgba(255,255,255,.1);
 
 }
-
 
 
 .logo{
@@ -214,7 +212,7 @@ body {
 
 
 
-/* Feature cards */
+
 
 
 .feature-section{
@@ -279,7 +277,7 @@ body {
 
 
 
-/* Chat */
+
 
 
 .chat-box{
@@ -356,7 +354,7 @@ body {
 
 
 
-/* Input */
+
 
 
 .chat-input{
@@ -578,7 +576,7 @@ body {
     margin-top:15px;
 
 }
-/* AI Avatar */
+
 
 .bot-header{
     display:flex;
@@ -627,7 +625,7 @@ body {
 }
 
 
-/* Bot message */
+
 
 .bot-message{
 
@@ -643,7 +641,7 @@ body {
 }
 
 
-/* User message */
+
 
 .user-message{
     display:flex;

@@ -11,7 +11,7 @@ function formatMessage(message){
 }
 
 
-// Add message to chat
+
 function addMessage(message, sender){
 
     const messageDiv = document.createElement("div");
@@ -53,7 +53,7 @@ function addMessage(message, sender){
 }
 
 
-// Typing animation
+
 function showTyping() {
 
     const typing = document.createElement("div");
@@ -78,7 +78,7 @@ function showTyping() {
 
 
 
-// Send message
+
 async function sendMessage() {
 
     const message = userInput.value.trim();
@@ -87,20 +87,20 @@ async function sendMessage() {
     if(message === "") return;
 
 
-    // Display user message
+    
     addMessage(message, "user");
 
 
-    // Clear input
+    
     userInput.value = "";
 
 
-    // Disable button while AI responds
+    
     sendBtn.disabled = true;
     sendBtn.innerHTML = "Thinking...";
 
 
-    // Show AI typing
+    
     showTyping();
 
 
@@ -128,7 +128,7 @@ async function sendMessage() {
         document.getElementById("typing")?.remove();
 
 
-        // Display AI response
+        
         addMessage(data.reply, "bot");
 
 
@@ -152,7 +152,7 @@ async function sendMessage() {
 
     finally{
 
-        // Enable button again
+        
         sendBtn.disabled = false;
         sendBtn.innerHTML = "Send";
 
@@ -164,7 +164,7 @@ async function sendMessage() {
 
 
 
-// Send button click
+
 sendBtn.addEventListener(
     "click",
     sendMessage
@@ -173,7 +173,7 @@ sendBtn.addEventListener(
 
 
 
-// Enter key support
+
 userInput.addEventListener(
     "keydown",
     function(event){
@@ -189,7 +189,7 @@ userInput.addEventListener(
 
     }
 );
-// Quick suggestion buttons
+
 
 const suggestions = document.querySelectorAll(".suggestion-btn");
 
