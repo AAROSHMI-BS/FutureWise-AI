@@ -7,7 +7,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY3"))
 
 @app.route("/")
 def home():
